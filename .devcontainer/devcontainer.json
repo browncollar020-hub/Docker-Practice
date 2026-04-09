@@ -1,15 +1,8 @@
 {
     "name": "Browser Config",
     "features": {
-        "ghcr.io/devcontainers/features/desktop-lite:1": {
-            "version": "latest"
-        }
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
     },
     "forwardPorts": [6080],
-    "portsAttributes": {
-        "6080": {
-            "label": "Virtual Desktop (VNC)",
-            "onAutoForward": "notify"
-        }
-    }
+    "postStartCommand": "/usr/local/share/desktop-init.sh"
 }
